@@ -1,0 +1,91 @@
+.sidenav {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* padding-top: 20px; */
+}
+.header-sidenav {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    background: #f5f6fa;
+}
+.header-sidenav h4{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 10px;
+    font-weight: bold;
+    color: #27ae60
+}  
+.vertical-menu {
+/* position: fixed; */
+/* top: 2rem;
+left: 2rem; */
+}
+
+.vertical-menu .link {
+display: block;
+position: relative;
+padding: 1rem;
+overflow: hidden;
+background-image: linear-gradient(to right, #D60270 0%, #D60270 40%, #fff 50.9999%);
+background-size: 200% 100%;
+background-position: 100% 0%;
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+font-size: 18px;
+font-weight: normal;
+text-decoration: none;
+transition: all .4s ease-in-out;
+}
+
+.vertical-menu .link:hover {
+background-position: 0% 0%;
+}
+
+.vertical-menu .link.active {
+/* background-image: linear-gradient(to right, #0038A8, #9B4F96, #D60270); */
+background-image: linear-gradient(to right, #f1c40f, #D60270);
+background-size: 100% 100%;
+background-position: 0% 0%;
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+font-weight: bold;
+}
+
+.vertical-menu .link::before {
+content: '';
+display: block;
+position: absolute;
+/* top: .875rem; */
+left: .125rem;
+width: 0;
+height: 100%;
+background-color: #6c757d;
+transition: all .2s ease-in-out;
+}
+
+.vertical-menu .link:hover::before {
+width: .25rem;
+background-color: #f1c40f;
+}
+
+.indicator {
+display: block;
+position: absolute;
+top: .875rem;
+left: .125rem;
+width: .375rem;
+height: 1.5rem;
+background-color: #0038A8;
+z-index: 1;
+}
