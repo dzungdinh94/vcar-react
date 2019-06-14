@@ -10,7 +10,7 @@ import PriceTimeSlot from './pricetimeslot'
 import ServiceAttach from './serviceattach'
 import Notify from './notify'
 import PriceDistance from './pricedistance'
-
+import History from './history';
 class HomeScreen extends Component {
 
   render() {
@@ -22,6 +22,7 @@ class HomeScreen extends Component {
       <div style={{ marginLeft: '300px', padding: '10px', background: '#f5f6fa', minHeight: window.innerHeight, overflow: 'auto' }}>
         <Route exact path={path} component={Home} />
         <Route path={`${path}/driver`} component={Driver} />
+        <Route path={`${path}/history`} component={History} />
         <Route path={`${path}/user`} component={User} />
         <Route path={`${path}/typecar`} component={Typecar} />
         <Route path={`${path}/pricetimeslot`} component={PriceTimeSlot} />

@@ -34,6 +34,7 @@ class Sidebar extends Component {
                     <Link className={`link ${pathname === '/home/typecar' && 'active'}`} to="/home/typecar" >Danh sách loại xe</Link>
                     <Link className={`link ${pathname === '/home/pricetimeslot' && 'active'}`} to="/home/pricetimeslot" >Giá xe theo khung giờ</Link>
                     <Link className={`link ${pathname === '/home/serviceattach' && 'active'}`} to="/home/serviceattach" >Dịch vụ đính kèm xe</Link>
+                    <Link className={`link ${pathname === '/home/history' && 'active'}`} to="/home/history" >Lịch sử đơn hàng</Link>
                     <Link className={`link ${pathname === '/home/notify' && 'active'}`} to="/home/notify" >Gửi thông báo</Link>
                 </div>
             </div>
