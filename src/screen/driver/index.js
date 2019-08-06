@@ -26,10 +26,10 @@ class Home extends Component {
                     key: 'phone',
                     name: 'Số điện thoại',
                 },
-                // {
-                //     key: 'email',
-                //     name: 'Email',
-                // },
+                {
+                    key: 'nameCar',
+                    name: 'Tên xe',
+                },
                 {
                     key: 'numberCar',
                     name: 'Số xe',
@@ -106,7 +106,8 @@ class Home extends Component {
         })
     }
     _onSaveModal = (data, isEdit, cberr) => {
-        let urlAction = !!isEdit ? 'update' : 'create'
+        let urlAction = !!isEdit ? 'update' : 'create';
+        console.log(`/${this.routerName}/${urlAction},"test`)
         PostWithToken(`/${this.routerName}/${urlAction}`, { ...data }, (err, data) => {
             if (err) return cberr(err);
             this.getData(this.state.activePage, this.state.search)
