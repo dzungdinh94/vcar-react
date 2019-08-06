@@ -27,7 +27,7 @@ class InsertModal extends Component {
   _onSave = () => {
     let { data, isEdit } = this.state
     if (!data.fullname) return this.setState({ warning: 'Nhập tên lái xe' })
-    // if (!data.email) return this.setState({ warning: 'Nhập email' })
+    if (!data.nameCar) return this.setState({ warning: 'Nhập tên xe' })
     if (!data.phone) return this.setState({ warning: 'Nhập số điện thoại' })
     if (!data.password && !isEdit) return this.setState({ warning: 'Nhập mật khẩu cho lái xe' })
     if (!data.numberCar) return this.setState({ warning: 'Nhập số xe' })
@@ -79,13 +79,13 @@ class InsertModal extends Component {
             data={data}
             onChange={this._onChangeData}
           />
-          {/* <TextInput
-            id="email"
-            type="email"
-            label="Email"
+          <TextInput
+            id="nameCar"
+            type="text"
+            label="Tên xe"
             data={data}
             onChange={this._onChangeData}
-          /> */}
+          />
           <TextInput
             id="password"
             type="password"
