@@ -41,7 +41,7 @@ class Login extends Component {
             controlId="formBasicText"
           // validationState={this.getValidationState()}
           >
-            <ControlLabel>Tên đăng nhập</ControlLabel>
+            <ControlLabel>Email</ControlLabel>
             <FormControl
               type="text"
               value={email}
