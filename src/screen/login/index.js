@@ -8,7 +8,7 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
+      email: '',
       password: '',
       warning: '',
     }
@@ -19,10 +19,10 @@ class Login extends Component {
     this.setState({})
   }
   _onLogin = () => {
-    let { username, password } = this.state
-    if (!username) return this.setState({ warning: 'Nhập tên đăng nhập' });
+    let { email, password } = this.state
+    if (!email) return this.setState({ warning: 'Nhập tên đăng nhập' });
     if (!password) return this.setState({ warning: 'Nhập mật khẩu' });
-    PostNoToken('/login', { username, password }, (err, data) => {
+    PostNoToken('/login', { email, password }, (err, data) => {
       if (err) return this.setState({ warning: err })
       !!data.token && localStorage.setItem('token', data.token);
       !!data.avatar && localStorage.setItem('avatar', data.avatar);
@@ -33,7 +33,7 @@ class Login extends Component {
 
   }
   render() {
-    let { username, password, warning } = this.state
+    let { email, password, warning } = this.state
     return (
       <div className="login" >
         <Col style={{ background: '#f5f6fa', padding: '30px 20px' }} xs={8} xsOffset={2} md={6} mdOffset={3} lg={4} lgOffset={4}  >
@@ -44,9 +44,9 @@ class Login extends Component {
             <ControlLabel>Tên đăng nhập</ControlLabel>
             <FormControl
               type="text"
-              value={username}
-              placeholder="Enter username"
-              onChange={this.handleChange('username')}
+              value={email}
+              placeholder="Enter email"
+              onChange={this.handleChange('email')}
             />
             <FormControl.Feedback />
           </FormGroup>
